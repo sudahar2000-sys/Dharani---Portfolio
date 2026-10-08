@@ -3,349 +3,409 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dharani K | Lead Zoho Developer & Consultant</title>
-  
+  <title>Dharani K | Associate Consultant / Lead Zoho Developer</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Space Grotesk"', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              400: '#818cf8',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    /* Glow utilities */
-    .glow-indigo {
-      box-shadow: 0 0 50px -10px rgba(99, 102, 241, 0.25);
-    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .heading-font { font-family: 'Space Grotesk', sans-serif; }
     .glass-card {
-      background: rgba(18, 24, 38, 0.7);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .glass-card-hover {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .glass-card-hover:hover {
-      border-color: rgba(99, 102, 241, 0.35);
-      transform: translateY(-3px);
-      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 24px -4px rgba(99, 102, 241, 0.2);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
     }
   </style>
 </head>
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-indigo-600 selection:text-white">
 
-<body class="bg-[#0b0f19] text-slate-200 antialiased selection:bg-brand-500 selection:text-white font-sans relative overflow-x-hidden min-h-screen">
+  <!-- Fixed Blur Gradient Accents -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-indigo-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 right-10 w-96 h-96 bg-violet-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
-  <!-- Ambient Light Effects -->
-  <div class="fixed top-[-10%] left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-brand-600/20 via-violet-600/15 to-transparent blur-[140px] pointer-events-none -z-10"></div>
-  <div class="fixed top-[45%] -right-40 w-[500px] h-[500px] bg-emerald-500/10 blur-[150px] pointer-events-none -z-10"></div>
-  <div class="fixed bottom-0 -left-40 w-[600px] h-[600px] bg-brand-600/10 blur-[160px] pointer-events-none -z-10"></div>
-
-  <!-- Floating Navigation -->
-  <header class="sticky top-5 z-50 max-w-5xl mx-auto px-4">
-    <nav class="flex items-center justify-between px-6 py-3.5 glass-card rounded-2xl shadow-2xl">
-      <a href="#" class="font-display font-extrabold text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-brand-400 bg-clip-text text-transparent">
-        DK<span class="text-brand-500">.</span>
-      </a>
-      <div class="hidden sm:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-400">
-        <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#experience" class="hover:text-white transition">Experience</a>
-        <a href="#skills" class="hover:text-white transition">Skills</a>
-        <a href="#projects" class="hover:text-white transition">Projects</a>
+  <!-- Top Sticky Navigation -->
+  <header class="sticky top-4 z-50 max-w-5xl mx-auto px-4">
+    <nav class="flex items-center justify-between px-6 py-3.5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200 shadow-sm">
+      <div class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 text-white flex items-center justify-center font-extrabold text-sm shadow-md shadow-indigo-100">DK</span>
+        <span class="font-bold text-slate-900 tracking-tight text-sm sm:text-base">Dharani K</span>
       </div>
-      <a href="#contact" class="px-4 py-2 bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-indigo-400 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-500/25">
-        Contact Me
-      </a>
+      <div class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-semibold text-slate-600">
+        <a href="#about" class="hover:text-indigo-600 transition">About</a>
+        <a href="#experience" class="hover:text-indigo-600 transition">Experience</a>
+        <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
+        <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+        <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition shadow-sm">Contact</a>
+      </div>
     </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 py-12 space-y-20">
+  <main class="max-w-5xl mx-auto px-4 py-8 space-y-10">
 
-    <!-- Hero Bento Card -->
-    <section id="about" class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden glow-indigo">
-      <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
-        <div class="space-y-6 text-center lg:text-left flex-1">
-          
-          <!-- Badge -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Available for Consultations & Projects
+    <!-- Hero Section -->
+    <section id="about" class="glass-card rounded-3xl p-8 sm:p-12 shadow-sm relative overflow-hidden">
+      <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 sm:gap-12">
+        <div class="space-y-5 text-center lg:text-left flex-1">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full text-indigo-700 text-xs font-semibold">
+            <span>Associate Consultant / Lead Zoho Developer</span>
           </div>
 
-          <div class="space-y-2">
-            <h1 class="text-4xl sm:text-6xl font-display font-black text-white tracking-tight leading-[1.1]">
-              DHARANI <span class="bg-gradient-to-r from-brand-400 via-indigo-300 to-violet-400 bg-clip-text text-transparent">K</span>
-            </h1>
-            <p class="text-base sm:text-lg font-medium text-slate-400 tracking-wide font-display">
-              Lead Zoho Developer & Associate Consultant[cite: 2]
-            </p>
-          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Dharani K
+          </h1>
 
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl font-normal">
-            Specialized in engineering end-to-end business architecture using the Zoho ecosystem[cite: 2]. Proven track record in orchestrating multi-application workflows, custom Deluge automation, complex REST API integrations, and seamless enterprise data migration[cite: 2].
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
+            Lead Zoho Developer with 2+ years of experience in designing and implementing end-to-end business solutions using the Zoho ecosystem. Skilled in Zoho CRM, Creator, FSM, Books, Desk, SalesIQ, People, Flow and Deluge scripting, with expertise in workflow automation, integrations and data migration. Experienced in leading client implementations, gathering requirements, mentoring team members, and delivering scalable solutions across multiple industries.
           </p>
 
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-            <a href="mailto:dharanik7081@gmail.com" class="px-6 py-3 bg-white text-slate-950 hover:bg-slate-200 font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-lg"[cite: 2]>
-              Get in Touch
+          <!-- Contact Quick Links -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2 text-xs sm:text-sm font-medium">
+            <a href="mailto:dharanik7081@gmail.com" class="px-4 py-2.5 bg-slate-900 text-white rounded-xl hover:bg-indigo-600 transition flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              dharanik7081@gmail.com
             </a>
-            <a href="https://www.linkedin.com/in/dharani-k-02a9b9215" target="_blank" class="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-xs uppercase tracking-wider rounded-xl transition"[cite: 2]>
+            <a href="tel:+919894678043" class="px-4 py-2.5 bg-white border border-slate-200 text-slate-800 rounded-xl hover:bg-slate-50 transition flex items-center gap-2">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              +91 9894678043
+            </a>
+            <a href="https://www.linkedin.com/in/dharani-k-02a9b9215" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 bg-white border border-slate-200 text-slate-800 rounded-xl hover:bg-slate-50 transition flex items-center gap-2">
+              <svg class="w-4 h-4 text-sky-600 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.738-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               LinkedIn
             </a>
-            <a href="tel:+919894678043" class="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-xs uppercase tracking-wider rounded-xl transition"[cite: 2]>
-              +91 9894678043[cite: 2]
-            </a>
           </div>
         </div>
 
-        <!-- Headshot Frame -->
+        <!-- Profile Headshot (Supports either profile.jpg or profile.jpg.png) -->
         <div class="relative shrink-0">
-          <div class="absolute inset-0 bg-gradient-to-tr from-brand-500 to-violet-600 rounded-3xl blur-xl opacity-40 -z-10 transform scale-105"></div>
-          <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden border border-white/15 bg-slate-900 shadow-2xl relative">
-            <img src="profile.jpg.png" alt="Dharani K" class="w-full h-full object-cover object-top filter contrast-[1.05]" onerror="this.src='profile.jpg'"[cite: 4]>
+          <div class="w-44 h-44 sm:w-56 sm:h-56 rounded-3xl overflow-hidden ring-4 ring-white shadow-xl bg-slate-100">
+            <img src="profile.jpg" onerror="this.onerror=null; this.src='profile.jpg.png';" alt="Dharani K" class="w-full h-full object-cover">
           </div>
-        </div>
-      </div>
-
-      <!-- Quick Metrics Strip -->
-      <div class="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
-        <div class="space-y-1">
-          <div class="text-3xl font-display font-extrabold text-white">2+ <span class="text-brand-400 text-xl font-normal">Yrs</span></div>
-          <div class="text-xs text-slate-400 font-medium tracking-wide uppercase">Zoho Ecosystem[cite: 2]</div>
-        </div>
-        <div class="space-y-1">
-          <div class="text-3xl font-display font-extrabold text-white">7+</div>
-          <div class="text-xs text-slate-400 font-medium tracking-wide uppercase">Client Implementations[cite: 2]</div>
-        </div>
-        <div class="space-y-1">
-          <div class="text-3xl font-display font-extrabold text-white">9.49 <span class="text-brand-400 text-sm font-normal">CGPA</span></div>
-          <div class="text-xs text-slate-400 font-medium tracking-wide uppercase">B.E ECE • CIT[cite: 2]</div>
-        </div>
-        <div class="space-y-1">
-          <div class="text-3xl font-display font-extrabold text-emerald-400">Awarded</div>
-          <div class="text-xs text-slate-400 font-medium tracking-wide uppercase">Rising Star 2025[cite: 3]</div>
         </div>
       </div>
     </section>
 
-    <!-- Experience & Education Bento -->
-    <section id="experience" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      
-      <!-- Current Role (2 cols) -->
-      <div class="md:col-span-2 glass-card rounded-3xl p-8 space-y-6 border border-white/10">
-        <div class="flex items-center justify-between border-b border-white/10 pb-4">
-          <div>
-            <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Current Employment</span>
-            <h3 class="text-xl font-display font-bold text-white mt-0.5">Associate Consultant / Lead Zoho Developer[cite: 2]</h3>
-            <p class="text-xs text-slate-400">Thoughtlogik Technology Solutions • Coimbatore, Tamil Nadu[cite: 2]</p>
-          </div>
-          <span class="text-xs font-semibold px-3 py-1 bg-brand-500/10 text-brand-300 border border-brand-500/20 rounded-full">Jun 2024 – Present[cite: 2]</span>
+    <!-- Achievements, Certifications & Education Bar -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <!-- Achievement Card -->
+      <div class="glass-card p-6 rounded-2xl shadow-sm border border-amber-100/80 bg-gradient-to-br from-amber-50/40 to-white">
+        <div class="flex items-center gap-2 text-amber-700 text-xs font-bold uppercase tracking-wider mb-2">
+          <span>🏆 Achievement</span>
         </div>
-        
-        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+        <h3 class="text-base font-bold text-slate-900">Rising Star Award-2025</h3>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+          Recognized, for outstanding performance and independently handling and delivering successful results in the Zoho People implementation.
+        </p>
+      </div>
+
+      <!-- Certification Card -->
+      <div class="glass-card p-6 rounded-2xl shadow-sm border border-indigo-100/80 bg-gradient-to-br from-indigo-50/40 to-white">
+        <div class="flex items-center gap-2 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-2">
+          <span>🎓 Certification</span>
+        </div>
+        <h3 class="text-base font-bold text-slate-900">Zoho Creator Developer-Associate</h3>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+          Certified proficiency in low-code application development, custom workflows, architecture, and relational schema on Zoho Creator.
+        </p>
+      </div>
+
+      <!-- Education Card -->
+      <div class="glass-card p-6 rounded-2xl shadow-sm border border-slate-200">
+        <div class="flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">
+          <span>🏛️ Education</span>
+        </div>
+        <h3 class="text-base font-bold text-slate-900">Coimbatore Institute of Technology</h3>
+        <p class="text-xs font-semibold text-indigo-600 mt-1">B.E – Electronics and Communication Engineering (2019–2023)</p>
+        <p class="text-xs text-slate-600 mt-1">Coimbatore • <strong>CGPA 9.49</strong></p>
+      </div>
+    </div>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold text-slate-900">Professional Experience</h2>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 gap-2">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Associate Consultant / Lead Zoho Developer</h3>
+            <p class="text-sm font-semibold text-indigo-600">Thoughtlogik Technology Solutions</p>
+          </div>
+          <div class="text-xs sm:text-sm text-slate-500 sm:text-right">
+            <div>Coimbatore, Tamil Nadu</div>
+            <div class="font-medium text-slate-700">Jun 2024 – Present</div>
+          </div>
+        </div>
+
+        <ul class="space-y-3 text-sm text-slate-600 leading-relaxed">
           <li class="flex items-start gap-2.5">
-            <span class="text-brand-400 mt-1">▸</span>
-            <span>Architected and delivered scalable end-to-end business systems across Zoho CRM, Creator, FSM, Books, Desk, Recruit, People, and SalesIQ[cite: 2].</span>
+            <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+            <span>Designed and implemented end-to-end Zoho solutions based on business requirements.</span>
           </li>
           <li class="flex items-start gap-2.5">
-            <span class="text-brand-400 mt-1">▸</span>
-            <span>Led 7+ full-cycle client implementations, managing solution designs, UAT validation, and production deployments[cite: 2].</span>
+            <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+            <span>Customized Zoho CRM, Creator, FSM, Books, Desk, Recruit, People and SalesIQ.</span>
           </li>
           <li class="flex items-start gap-2.5">
-            <span class="text-brand-400 mt-1">▸</span>
-            <span>Authored Deluge custom functions, multi-step Blueprints, approval hierarchies, and connected systems with REST APIs & Zoho Flow[cite: 2].</span>
+            <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+            <span>Led 7+ client implementations ,from requirement gathering to deployment.</span>
           </li>
           <li class="flex items-start gap-2.5">
-            <span class="text-brand-400 mt-1">▸</span>
-            <span>Collaborated directly with UK-based stakeholders and mentored junior developers through complex automation challenges[cite: 2].</span>
+            <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+            <span>Developed workflows ,Blueprints ,approval process ,custom functions and third-party integrations using Zoho Flow and REST APIs.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+            <span>Performed data migration, troubleshooting, optimization and post-implementation support.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+            <span>Collaborated with UK-based clients and mentored junior team members.</span>
           </li>
         </ul>
       </div>
-
-      <!-- Education & Honors (1 col) -->
-      <div class="glass-card rounded-3xl p-8 space-y-6 flex flex-col justify-between">
-        <div class="space-y-4">
-          <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Education & Honors</span>
-          
-          <div class="space-y-1">
-            <h4 class="font-display font-bold text-white text-base">B.E — Electronics & Communication[cite: 2]</h4>
-            <p class="text-xs text-slate-400">Coimbatore Institute of Technology[cite: 2]</p>
-            <div class="text-xs font-bold text-emerald-400 pt-1">CGPA: 9.49 / 10.0 (2019 – 2023)[cite: 2]</div>
-          </div>
-
-          <div class="pt-4 border-t border-white/10 space-y-2">
-            <div class="text-xs text-slate-400 uppercase font-semibold">Award Recognition</div>
-            <div class="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-1">
-              <div class="text-xs font-bold text-white flex items-center gap-1.5">
-                <span>🏆</span> Rising Star Award (2025)[cite: 3]
-              </div>
-              <p class="text-[11px] text-slate-400 leading-snug">
-                Recognized for outstanding ownership and standalone delivery in enterprise Zoho People implementation[cite: 3].
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="pt-4 border-t border-white/10">
-          <div class="text-xs font-bold text-slate-300 flex items-center justify-between">
-            <span>Zoho Creator Developer</span>
-            <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 text-[10px]">Associate[cite: 3]</span>
-          </div>
-        </div>
-      </div>
-
     </section>
 
-    <!-- Skills Ecosystem Grid -->
-    <section id="skills" class="space-y-8">
-      <div class="text-center sm:text-left">
-        <h2 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">Technical Arsenal</h2>
-        <p class="text-xs sm:text-sm text-slate-400 mt-1">Specialized toolkits and engineering capabilities in the Zoho domain.</p>
-      </div>
+    <!-- Skills Bento Grid -->
+    <section id="skills" class="space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">Skills & Technical Competencies</h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         
-        <!-- App Ecosystem -->
-        <div class="glass-card rounded-2xl p-6 space-y-4 border border-white/5 glass-card-hover">
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-brand-400 font-bold">
-            01
+        <!-- Zoho Applications -->
+        <div class="glass-card p-6 rounded-2xl shadow-sm space-y-3">
+          <div class="flex items-center gap-2 text-indigo-600 font-bold text-sm">
+            <span>📱</span>
+            <h3>Zoho Applications</h3>
           </div>
-          <h3 class="font-display font-bold text-white text-base">Zoho Applications</h3>
-          <div class="flex flex-wrap gap-1.5 text-xs text-slate-300">
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho CRM</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho Creator</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho FSM</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho Books</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho Desk</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho SalesIQ</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho People</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho Recruit</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho Flow</span>
-          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Zoho CRM, Zoho Creator, Zoho People, Zoho Recruit, Zoho FSM ,Zoho Flow, Zoho Books ,Zoho Desk ,Zoho SalesIQ , Zoho Forms , Zoho Projects
+          </p>
         </div>
 
         <!-- Development & Automation -->
-        <div class="glass-card rounded-2xl p-6 space-y-4 border border-white/5 glass-card-hover">
-          <div class="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 font-bold">
-            02
+        <div class="glass-card p-6 rounded-2xl shadow-sm space-y-3">
+          <div class="flex items-center gap-2 text-indigo-600 font-bold text-sm">
+            <span>⚙️</span>
+            <h3>Development & Automation</h3>
           </div>
-          <h3 class="font-display font-bold text-white text-base">Automation & Logic</h3>
-          <div class="flex flex-wrap gap-1.5 text-xs text-slate-300">
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Deluge Scripting</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Blueprints</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Approval Logic</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Custom Functions</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Webhooks</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Layout Rules</span>
-          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Deluge, Blueprints, Workflows, Approval Processes ,Custom Functions etc.
+          </p>
         </div>
 
         <!-- Integrations -->
-        <div class="glass-card rounded-2xl p-6 space-y-4 border border-white/5 glass-card-hover">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">
-            03
+        <div class="glass-card p-6 rounded-2xl shadow-sm space-y-3">
+          <div class="flex items-center gap-2 text-indigo-600 font-bold text-sm">
+            <span>🔌</span>
+            <h3>Integrations</h3>
           </div>
-          <h3 class="font-display font-bold text-white text-base">API Integrations</h3>
-          <div class="flex flex-wrap gap-1.5 text-xs text-slate-300">
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">REST APIs</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Xero Integration</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Billingbooth</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">FreeAgent</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">CRM-Creator Sync</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho Billing</span>
-          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            REST APIs ,CRM-Creator, CRM-Recruit, Zoho Billing- FreeAgent , Zoho Forms ,Zoho Flow, Webhooks , Third-party API Integrations , Zoho CRM-Xero , Zoho CRM-Billingbooth.
+          </p>
         </div>
 
-        <!-- Data Migration -->
-        <div class="glass-card rounded-2xl p-6 space-y-4 border border-white/5 glass-card-hover">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-bold">
-            04
+        <!-- Data Management -->
+        <div class="glass-card p-6 rounded-2xl shadow-sm space-y-3">
+          <div class="flex items-center gap-2 text-indigo-600 font-bold text-sm">
+            <span>📊</span>
+            <h3>Data Management</h3>
           </div>
-          <h3 class="font-display font-bold text-white text-base">Data & Migration</h3>
-          <div class="flex flex-wrap gap-1.5 text-xs text-slate-300">
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Salesforce Migration</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Joblogic Migration</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Zoho DataPrep</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">ETL Cleansing</span>
-            <span class="px-2 py-1 rounded-md bg-white/5 border border-white/5">Analytics & Reports</span>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Zoho DataPrep , Salesforce Migration ,Joblogic Migration , Data Cleansing, Data Import/Export ,Dashboards & Reports
+          </p>
+        </div>
+
+        <!-- Project & Leadership (Full width) -->
+        <div class="glass-card p-6 rounded-2xl shadow-sm space-y-3 md:col-span-2">
+          <div class="flex items-center gap-2 text-indigo-600 font-bold text-sm">
+            <span>👥</span>
+            <h3>Project & Leadership</h3>
           </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Requirement Gathering , Solution Design ,Project Planning ,Client Communication ,UAT Support ,Project Ownership ,Team Mentoring ,Documentation ,Troubleshooting and Production Deployment
+          </p>
         </div>
 
       </div>
     </section>
 
-    <!-- Project Implementations Grid -->
-    <section id="projects" class="space-y-8">
-      <div class="text-center sm:text-left">
-        <h2 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">Featured Deployments</h2>
-        <p class="text-xs sm:text-sm text-slate-400 mt-1">High-impact projects engineered for scalability, accuracy, and operational efficiency.</p>
+    <!-- Project Experience Section -->
+    <section id="projects" class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">Project Experience</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Detailed case studies of business solutions designed and implemented.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="space-y-6">
 
         <!-- Project 1 -->
-        <div class="glass-card rounded-3xl p-7 space-y-5 border border-white/10 glass-card-hover flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Healthcare Tech</span>
-              <span class="text-[10px] text-slate-400">Creator • CRM • Recruit • People</span>[cite: 3]
+        <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm space-y-4 border-l-4 border-l-indigo-600">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900">Healthcare Operations Automation</h3>
+            <div class="inline-flex flex-wrap gap-1.5 text-[11px] font-semibold text-indigo-700">
+              <span class="bg-indigo-50 px-2 py-0.5 rounded">Zoho Creator</span>
+              <span class="bg-indigo-50 px-2 py-0.5 rounded">Zoho CRM</span>
+              <span class="bg-indigo-50 px-2 py-0.5 rounded">Zoho People</span>
+              <span class="bg-indigo-50 px-2 py-0.5 rounded">Zoho Recruit</span>
+              <span class="bg-indigo-50 px-2 py-0.5 rounded">Zoho DataPrep</span>
             </div>
-            <h3 class="text-lg font-display font-bold text-white">Healthcare Operations & Carer Platform</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Designed a comprehensive healthcare application on Zoho Creator to manage clients, carers, and shifting schedules[cite: 3]. Built CRM Blueprints for intake qualification and connected Recruit and People to automate onboarding and leave workflows[cite: 3].
-            </p>
           </div>
-          <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2 text-[11px] text-slate-400">
-            <span class="text-slate-300">Highlights:</span> Blueprints, Cross-App Sync, Shift Management, DataPrep[cite: 3]
-          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Developed a healthcare management platform using Creator for managing clients ,carers and shifts.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Integrated Creator with CRM ,People and Recruit to automate recruitment and onboarding processes.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Built CRM Blueprints and automated lead qualification, referrals, onboarding and care management workflows.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Implemented CRM-Recruit integration to automate candidate hiring, client creation and onboarding processes.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-indigo-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Migrated HR data into Zoho People and configured leave policies ,approval workflows ,custom modules and automated employee notification processes.</span>
+            </li>
+          </ul>
         </div>
 
         <!-- Project 2 -->
-        <div class="glass-card rounded-3xl p-7 space-y-5 border border-white/10 glass-card-hover flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Telecom</span>
-              <span class="text-[10px] text-slate-400">CRM • Flow • Billingbooth • Xero</span>[cite: 3]
+        <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm space-y-4 border-l-4 border-l-emerald-600">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900">Financial Services CRM Implementation</h3>
+            <div class="inline-flex flex-wrap gap-1.5 text-[11px] font-semibold text-emerald-700">
+              <span class="bg-emerald-50 px-2 py-0.5 rounded">Zoho CRM</span>
+              <span class="bg-emerald-50 px-2 py-0.5 rounded">Zoho Forms</span>
             </div>
-            <h3 class="text-lg font-display font-bold text-white">Leading Broadband Provider CRM & Migration</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Developed a tailored CRM from scratch to manage customer journeys[cite: 3]. Migrated corporate historical records from Salesforce with complete accuracy[cite: 3]. Integrated external billing (Billingbooth) and accounting (Xero) using REST APIs and Zoho Flow[cite: 3].
-            </p>
           </div>
-          <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2 text-[11px] text-slate-400">
-            <span class="text-slate-300">Highlights:</span> Salesforce Migration, Zoho Flow, External Accounting Sync[cite: 3]
-          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Implemented a complete CRM Solution from scratch with customized core modules (Leads, Contacts ,Deals) and automated Sales processes using workflows ,custom functions ,layouts and automation.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Configured lead intake forms and notification workflows to improve sales visibility.</span>
+            </li>
+          </ul>
         </div>
 
         <!-- Project 3 -->
-        <div class="glass-card rounded-3xl p-7 space-y-5 border border-white/10 glass-card-hover flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Field Services</span>
-              <span class="text-[10px] text-slate-400
+        <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm space-y-4 border-l-4 border-l-purple-600">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900">Compliance Management Platform</h3>
+            <div class="inline-flex flex-wrap gap-1.5 text-[11px] font-semibold text-purple-700">
+              <span class="bg-purple-50 px-2 py-0.5 rounded">Zoho Creator</span>
+              <span class="bg-purple-50 px-2 py-0.5 rounded">Zoho CRM</span>
+              <span class="bg-purple-50 px-2 py-0.5 rounded">Zoho Billing</span>
+              <span class="bg-purple-50 px-2 py-0.5 rounded">Zoho WorkDrive</span>
+              <span class="bg-purple-50 px-2 py-0.5 rounded">FreeAgent</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="text-purple-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Built a Zoho Creator application to onboard multiple client companies and manage product compliance and certifications.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-purple-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Automated compliance document generation and storage using Zoho WorkDrive.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-purple-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Integrated Zoho Billing with FreeAgent to streamline invoicing processes.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm space-y-4 border-l-4 border-l-blue-600">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900">Leading Broadband Provider CRM Implementation</h3>
+            <div class="inline-flex flex-wrap gap-1.5 text-[11px] font-semibold text-blue-700">
+              <span class="bg-blue-50 px-2 py-0.5 rounded">Zoho CRM</span>
+              <span class="bg-blue-50 px-2 py-0.5 rounded">Zoho Flow</span>
+              <span class="bg-blue-50 px-2 py-0.5 rounded">Zoho SalesIQ</span>
+              <span class="bg-blue-50 px-2 py-0.5 rounded">Billingbooth</span>
+              <span class="bg-blue-50 px-2 py-0.5 rounded">Xero</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="text-blue-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Designed and developed a complete custom CRM solution from scratch tailored to the client’s broadband business processes.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-blue-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Built advanced automation workflows ,customer management modules. Integrated Zoho CRM with third party applications such as Billingbooth and Xero using Zoho Flow and REST APIs.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-blue-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Successfully migrated business data from Salesforce while ensuring high data accuracy and integrity.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm space-y-4 border-l-4 border-l-amber-600">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900">Generator Supplier</h3>
+            <div class="inline-flex flex-wrap gap-1.5 text-[11px] font-semibold text-amber-700">
+              <span class="bg-amber-50 px-2 py-0.5 rounded">Zoho CRM</span>
+              <span class="bg-amber-50 px-2 py-0.5 rounded">Zoho FSM</span>
+              <span class="bg-amber-50 px-2 py-0.5 rounded">SalesIQ</span>
+              <span class="bg-amber-50 px-2 py-0.5 rounded">Desk</span>
+              <span class="bg-amber-50 px-2 py-0.5 rounded">Books</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Migrated field service operations from Joblogic to Zoho FSM with complete master and transactional data migration.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-600 font-bold shrink-0 mt-0.5">•</span>
+              <span>Implemented Zoho SalesIQ ,CRM and Desk to support their field operations and customer workflows.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer / Contact Card -->
+    <section id="contact" class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-xl">
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">DHARANI K</h2>
+      <p class="text-slate-400 max-w-md mx-auto text-xs sm:text-sm">
+        Associate Consultant / Lead Zoho Developer
+      </p>
+      
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2 text-xs sm:text-sm">
+        <a href="mailto:dharanik7081@gmail.com" class="px-5 py-3 bg-indigo-600 hover:bg-indigo-700 font-semibold rounded-xl transition">
+          dharanik7081@gmail.com
+        </a>
+        <a href="tel:+919894678043" class="px-5 py-3 bg-slate-800 hover:bg-slate-700 font-semibold rounded-xl transition border border-slate-700">
+          +91 9894678043
+        </a>
+        <a href="https://www.linkedin.com/in/dharani-k-02a9b9215" target="_blank" rel="noopener noreferrer" class="px-5 py-3 bg-slate-800 hover:bg-slate-700 font-semibold rounded-xl transition border border-slate-700">
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 text-[11px] text-slate-500">
+        Thoughtlogik Technology Solutions • Coimbatore, Tamil Nadu
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
